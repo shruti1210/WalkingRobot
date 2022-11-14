@@ -38,10 +38,16 @@ except ServoTimeoutError as e:
     quit()
 
 t = 0
+
+theta10 = 80
+theta20 = 160
+theta30 = 50
+theta40 = 180
+
 while True:
     #motion for the left leg 
-    servo1.move(theta1 + sin(t) * 15)
-    servo2.move(theta2 + sin(t) * 15)
+    servo1.move(theta10 + sin(t) * 15)
+    servo2.move(theta20 + sin(t) * 15)
     
     print("\n at time t", t)
     
@@ -50,8 +56,8 @@ while True:
   
     
     #motion for the right leg
-    servo3.move(theta3 + cos(t) * 15)
-    servo4.move(theta4 + cos(t) * 15)
+    servo3.move(theta30 + cos(t) * 15)
+    servo4.move(theta40 + cos(t) * 15)
     
     print("angle for upper motor on right leg is", servo3.get_physical_angle())
     print("angle for lower motor on right leg is", servo4.get_physical_angle())
