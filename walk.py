@@ -40,14 +40,14 @@ except ServoTimeoutError as e:
 t = 0
 while True:
     #motion for the left leg 
-    servo1.move(sin(t) * 4 + 4)
-    servo2.move(sin(t) * 4 + 4)
+    servo1.move(theta1 + sin(t) * 10)
+    servo2.move(theta2 + sin(t) * 10)
 
     time.sleep(0.1)
     
     #motion for the right leg
-    servo3.move(sin(t) * 4 + 4)
-    servo4.move(sin(t) * 4 + 4)
+    servo3.move(theta3 + sin(t) * 10)
+    servo4.move(theta4 + sin(t) * 10)
     time.sleep(0.1)
 
     t += 0.01
