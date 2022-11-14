@@ -44,10 +44,10 @@ theta20 = 157
 theta30 = 54
 theta40 = 183
 
-while t<5:
+while True:
     #motion for the left leg 
-    servo1.move(theta10 + sin(t) * 5)
-    servo2.move(theta20 + sin(t) * 10)
+    servo1.move(theta10)
+    servo2.move(theta20 + sin(t) * 5)
     
     print("\n at time t", t)
     
@@ -56,8 +56,8 @@ while t<5:
   
     
     #motion for the right leg
-    servo3.move(theta30 + cos(t) * 5)
-    servo4.move(theta40 + cos(t) * 10)
+    servo3.move(theta30)
+    servo4.move(theta40 + cos(t) * 5)
     
     print("angle for upper motor on right leg is", servo3.get_physical_angle())
     print("angle for lower motor on right leg is", servo4.get_physical_angle())
