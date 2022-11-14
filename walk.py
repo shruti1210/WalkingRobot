@@ -41,13 +41,13 @@ t = 0
 while True:
     #motion for the left leg 
     servo1.move(sin(t) * 10 + 10)
-    servo2.move(cos(t) * 10 + 10)
+    servo2.move(cos(t) * 10 + 90)
 
     time.sleep(0.1)
     
     #motion for the right leg
     servo3.move(sin(t) * 10 + 10)
-    servo4.move(cos(t) * 10 + 10)
+    servo4.move(cos(t) * 10 + 90)
     time.sleep(0.1)
 
     t += 0.01
