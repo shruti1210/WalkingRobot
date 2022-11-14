@@ -61,6 +61,7 @@ while True:
     print("angle for upper motor on right leg is", servo3.get_physical_angle())
     print("angle for lower motor on right leg is", servo4.get_physical_angle())
     
-    time.sleep(0.005)
+    time.sleep(0.001)
 
-    t += 0.01
+    t += 0.02
+    
