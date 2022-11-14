@@ -15,9 +15,17 @@ try:
     
     #get initial servo positions for left leg
     theta1 = servo1.get_physical_angle()
+    
+    with open('theta1.txt', 'a') as f:
+        f.write(str(theta1) + "\n")
+    
     print("angle for upper motor on left leg is", theta1)
+    
     theta2 = servo2.get_physical_angle()
     print("angle for lower motor on left leg is", theta2)
+    
+    with open('theta2.txt', 'a') as f:
+        f.write(str(theta2) + "\n")
 
     #right leg
     servo3 = LX16A(3)
@@ -29,9 +37,17 @@ try:
     
     #get initial servo positions for right leg
     theta3 = servo3.get_physical_angle()
+    
+    with open('theta3.txt', 'a') as f:
+            f.write(str(theta3) + "\n")
+        
     print("angle for upper motor on right leg is", theta3)
     theta4 = servo4.get_physical_angle()
+    
     print("angle for lower motor on right leg is", theta4)
+    
+    with open('theta4.txt', 'a') as f:
+        f.write(str(theta4) + "\n")
 
 except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
