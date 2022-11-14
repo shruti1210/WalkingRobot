@@ -44,7 +44,7 @@ theta20 = 157
 theta30 = 54
 theta40 = 183
 
-while True:
+while t<5:
     #motion for the left leg 
     servo1.move(theta10 + sin(t) * 5)
     servo2.move(theta20 + sin(t) * 10)
