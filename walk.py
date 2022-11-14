@@ -42,12 +42,10 @@ while True:
     #motion for the left leg 
     servo1.move(theta1 + sin(t) * 10)
     servo2.move(theta2 + sin(t) * 10)
-
-    time.sleep(0.1)
     
     #motion for the right leg
     servo3.move(theta3 + sin(t) * 10)
     servo4.move(theta4 + sin(t) * 10)
-    time.sleep(0.1)
+    time.sleep(0.01)
 
     t += 0.01
