@@ -64,7 +64,7 @@ while True:
     #motion for the left leg 
     servo1.move(theta10 - sin(t) * 30)
     #servo1.move(theta10)
-    servo2.move(theta20 + sin(t) * 60)
+    servo2.move(theta20 + sin(t) * 30)
     print("\n at time t", t)
     
     print("angle for upper motor on left leg is", servo1.get_physical_angle())
@@ -73,7 +73,7 @@ while True:
     #motion for the right leg
     servo3.move(theta30 - sin(t) * 30)
     #servo3.move(theta30)
-    servo4.move(theta40 + sin(t) * 60)
+    servo4.move(theta40 + sin(t) * 30)
     
     print("angle for upper motor on right leg is", servo3.get_physical_angle())
     print("angle for lower motor on right leg is", servo4.get_physical_angle())
