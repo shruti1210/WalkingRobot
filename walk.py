@@ -64,8 +64,7 @@ while True:
     #motion for the left leg 
     #servo1.move(theta10 + sin(t) * 10)
     servo1.move(theta10)
-    servo2.move(theta20)
-    #servo2.move(theta20 + sin(t) * 40)
+    servo2.move(theta20 + sin(t) * 40)
     time.sleep(0.002)
     print("\n at time t", t)
     
