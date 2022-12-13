@@ -5,46 +5,46 @@ import time
 LX16A.initialize("/dev/ttyUSB0", 0.1)
 
 try:
-    #left leg 
+    #right leg 
     servo1 = LX16A(4)
     servo2 = LX16A(1)
 
-    #set limits for the servo angles left leg
+    #set limits for the servo angles right leg
     servo1.set_angle_limits(0, 240)
     servo2.set_angle_limits(0, 240)
     
-    #get initial servo positions for left leg
+    #get initial servo positions for right leg
     theta1 = servo1.get_physical_angle()
     
     with open('theta1.txt', 'x') as f:
         f.write(str(theta1) + "\n")
     
-    print("angle for upper motor on left leg is", theta1)
+    print("angle for upper motor on right leg is", theta1)
     
     theta2 = servo2.get_physical_angle()
-    print("angle for lower motor on left leg is", theta2)
+    print("angle for lower motor on right leg is", theta2)
     
     with open('theta2.txt', 'x') as f:
         f.write(str(theta2) + "\n")
 
-    #right leg
+    #left leg
     servo3 = LX16A(3)
     servo4 = LX16A(2)
 
-    #set limits for the servo angles right leg 
+    #set limits for the servo angles left leg 
     servo3.set_angle_limits(0, 240)
     servo4.set_angle_limits(0, 240) 
     
-    #get initial servo positions for right leg
+    #get initial servo positions for left leg
     theta3 = servo3.get_physical_angle()
     
     with open('theta3.txt', 'x') as f:
             f.write(str(theta3) + "\n")
         
-    print("angle for upper motor on right leg is", theta3)
+    print("angle for upper motor on left leg is", theta3)
     theta4 = servo4.get_physical_angle()
     
-    print("angle for lower motor on right leg is", theta4)
+    print("angle for lower motor on left leg is", theta4)
     
     with open('theta4.txt', 'x') as f:
         f.write(str(theta4) + "\n")
@@ -61,7 +61,7 @@ theta30 = 54
 theta40 = 183
 
 while True:
-    #motion for the left leg 
+    #motion for the right leg 
     servo1.move(theta10 - sin(t) * 10 - 15)
     
     time.sleep(0.002)
@@ -71,18 +71,18 @@ while True:
     
     time.sleep(0.002)
     
-    print("angle for upper motor on left leg is", servo1.get_physical_angle())
-    print("angle for lower motor on left leg is", servo2.get_physical_angle())
+    print("angle for upper motor on right leg is", servo1.get_physical_angle())
+    print("angle for lower motor on right leg is", servo2.get_physical_angle())
   
-    #motion for the right leg
+    #motion for the left leg
     servo3.move(theta30 + sin(t) * 10 - 15)
     
     time.sleep(0.002)
     
     servo4.move(theta40 + sin(t) * 10 - 30)
     
-    print("angle for upper motor on right leg is", servo3.get_physical_angle())
-    print("angle for lower motor on right leg is", servo4.get_physical_angle())
+    print("angle for upper motor on left leg is", servo3.get_physical_angle())
+    print("angle for lower motor on left leg is", servo4.get_physical_angle())
     
     time.sleep(0.002)
 
