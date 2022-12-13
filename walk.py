@@ -66,7 +66,7 @@ while True:
     
     time.sleep(0.002)
     
-    servo2.move(theta20 - sin(t) * 10 - 60)
+    servo2.move(theta20 - sin(t) * 10 - 40)
     print("\n at time t", t)
     
     time.sleep(0.002)
