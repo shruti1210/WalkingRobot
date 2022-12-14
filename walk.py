@@ -62,7 +62,7 @@ theta40 = 183
 
 while True:
     #motion for the right leg 
-    servo1.move(theta10 - sin(t) * 10 - 15)
+    servo1.move(theta10 - sin(t) * 5 - 10)
     
     time.sleep(0.002)
     
@@ -75,7 +75,7 @@ while True:
     print("angle for lower motor on right leg is", servo2.get_physical_angle())
   
     #motion for the left leg
-    servo3.move(theta30 + sin(t) * 10 - 15)
+    servo3.move(theta30 + sin(t) * 5 - 10)
     
     time.sleep(0.002)
     
