@@ -61,6 +61,8 @@ theta30 = 54
 theta40 = 183
 
 while True:
+    
+    """
     #motion for the right leg 
     servo1.move(theta10 - sin(t) * 20 + 10)
     
@@ -87,10 +89,10 @@ while True:
     time.sleep(0.002)
 
     t += 0.01
-    
+    """
     
     #not much motion but stable gait for following parameters 
-    """
+    
     #motion for the left leg 
     servo1.move(theta10 - sin(t) * 30 - 15)
     servo2.move(theta20 - sin(t) * 10 + 40)
@@ -110,4 +112,3 @@ while True:
     time.sleep(0.002)
 
     t += 0.01
-    """
