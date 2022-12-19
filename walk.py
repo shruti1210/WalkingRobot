@@ -62,13 +62,13 @@ theta40 = 183
 
 while True:
     
-    """
+    
     #motion for the right leg 
-    servo1.move(theta10 - sin(t) * 20 + 10)
+    servo1.move(theta10 + sin(6.28*t) * 50)
     
     #time.sleep(0.002)
     
-    servo2.move(theta20 - sin(t) * 20 - 10)
+    servo2.move(theta20 + sin(6.28*t) * 50)
     print("\n at time t", t)
     
     #time.sleep(0.002)
@@ -77,11 +77,11 @@ while True:
     print("angle for lower motor on right leg is", servo2.get_physical_angle())
   
     #motion for the left leg
-    servo3.move(theta30 + sin(t) * 20 - 10)
+    servo3.move(theta30 + sin(6.28*t) * 50)
     
     #time.sleep(0.002)
     
-    servo4.move(theta40 + sin(t) * 20 - 10)
+    servo4.move(theta40 + sin(6.28*t) * 50)
     
     print("angle for upper motor on left leg is", servo3.get_physical_angle())
     print("angle for lower motor on left leg is", servo4.get_physical_angle())
@@ -89,8 +89,8 @@ while True:
     time.sleep(0.002)
 
     t += 0.01
-    """
     
+    """
     #not much motion but stable gait for following parameters 
     
     #motion for the left leg 
@@ -110,5 +110,6 @@ while True:
     print("angle for lower motor on right leg is", servo4.get_physical_angle())
     
     time.sleep(0.002)
-
+    
     t += 0.01
+    """
